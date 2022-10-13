@@ -32,6 +32,7 @@ mulop -> * | / | % <br/>
 * If all the tokens generated for a given program are present in the grammars's productions, the parser returns SUCCESS.
 * If any token generated for a given program is not present in the grammar's productions, the parser returns ERROR.
 * Incase of ERROR, the parser program also displays the lexeme where the error is, and the row and column of numbers corresponding to the lexeme.
+* The following images shows the output of 5 test cases. Here the first 3 cases successfully compile without error as they are consistent with the given grammar. Test case 4 and 5 fail as the program's are not consistent with the given grammar.
 
 ![Parser](https://user-images.githubusercontent.com/75254081/195694432-bbd8c6ac-79a6-41f7-b102-f52d7bdffd50.png)
 
