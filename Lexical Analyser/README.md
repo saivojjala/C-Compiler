@@ -10,4 +10,4 @@ The program lexicalAnalyser.c reads a C program (sample.c) using fopen() functio
 <lexeme name, row number, column number, lexeme type>
 ```
 
-file:///home/saipranav/Pictures/Lexical%20Analyser.png
+![Lexical Analyser](https://user-images.githubusercontent.com/75254081/195597379-9f3856bf-5587-4611-9ed4-aac9f463eb27.png)
