@@ -4,7 +4,7 @@ Recursive Descent Parsing is a type of Top Down parser in which a procedure is w
 ## Implementation 
 
 ### Miniature C Grammar
-Program -> main() { declarations statement-list }
+Program -> main() { declarations statement-list } <br/>
 Declarations -> data-type identifier-list; declarations | e
 data-type -> int | char
 identifier-list -> id identifier-list-prime
