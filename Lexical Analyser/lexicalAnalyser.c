@@ -136,6 +136,24 @@ int getNextToken(char str[100], char c)
         t.token = str;
         return 1;
     }
+    else if(str[0] == ')' || str[0] == '(' || str[0] == ';' || str[0] == ',' || str[0] == '}' || str[0] == '{' || str[0] == '[' || str[0] == ']')
+    {
+        t.type = "special symbol";
+        t.token = str;
+        return 1;
+    }
+    else if (str[0] >= '0' && str[0] <= '9')
+    {
+        int i = 0;
+        while ((str[i] >= '0' && str[i] <= '9') && str[i] != '\0') i++;
+        
+        if (i == strlen(str))
+        {
+            t.type = "Numerical Constant";
+            t.token = str;
+            return 1;
+        }
+    }
     else if((str[0]!=c) && (c == ' ' || c == '\n' || c == ')' || c == '(' || c == ';' || c == ',' || c == '}' || c == '{'))
     {
         t.type = "identifier";

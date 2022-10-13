@@ -1,13 +1,22 @@
+// THIS is a COMMENT
 #include<stdio.h>
-//this is comment
+#include<stdlib.h>
 
-main ()
-{
-    int i, j;
-    i = 10;
-    j = 0;
-    while(j < i)
-    {
-        j = j + 1;
-    }
+main () 
+{ 
+	int a, b, c, i, j;
+	a = 12; 
+	b = 13;
+	c = 1;
+	i = 0;
+	j = 0;
+
+	while(i < 2)
+	{
+		i = i + 1;
+		while(j < 2)
+		{
+			j = j + 1;
+		}
+	}
 }

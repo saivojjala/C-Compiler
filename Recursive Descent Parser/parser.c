@@ -1,44 +1,3 @@
-/*
-Program -> main () { declarations assign_stat}
-declarations -> data_type identifier_list; declarations | e
-data_type -> int | char
-identifier_list -> id identifier_list_prime;
-identifier_list_prime -> , identifier_list | e
-assign_stat -> id = assign_stat_prime
-assign_stat_prime -> id | num
-expn -> simple-expn eprime
-eprime -> relop simple-expn | e
-simple-exp -> term seprime
-seprime -> addop term seprime | e
-term -> factor tprime
-tprime -> mulop factor tprime | e
-factor -> id | num
-relop -> == | != | <= | >= | > | <
-addop -> + | -
-mulop -> * | / | %
-
-
-First(Program) = {int, char}
-First(declarations) = {int, char, e}
-First(data_type) = {int, char}
-First(identifier_list) = {id}
-First(list) = {, , e}
-First(assign_stat) = {id}
-First(identifier) = {id, num}
-
-Follow(Program) = {$}
-Follow(declarations) = {id}
-Follow(data_type) = {id}
-Follow(identifier_list) = {;}
-Follow(list) = {;}
-Follow(assign_stat) = { } }
-Follow(identifier) = { } }
-
-*/
-
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
 #include "generateToken.h"
 
 FILE* f;
@@ -71,9 +30,11 @@ void relop();
 void addop();
 void mulop();
 
-int main()
+int main(int argc, char const *argv[])
 {
-    f = preprocess();
+    FILE *f1;
+    f1 = fopen(argv[1], "r");
+    f = preprocess(f1);
     program();
     valid();
 }

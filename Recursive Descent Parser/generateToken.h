@@ -175,11 +175,9 @@ int getNextToken(char str[100], char c)
     else return 0;
 }
 
-FILE* preprocess()
+FILE* preprocess(FILE *f1)
 {
-    FILE *f1, *f2, *f3;
-
-    f1 = fopen("test5.c", "r");
+    FILE *f2, *f3;
 
     if (f1 == NULL)
     {
