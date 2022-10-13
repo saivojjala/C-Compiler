@@ -1,9 +1,7 @@
 # Recursive Descent Parser
 Recursive Descent Parsing is a type of Top Down parser in which a procedure is written for each and every non terminal that appears in the grammar. 
 
-## Implementation 
-
-### Miniature C Grammar
+## Miniature C Grammar
 Program -> main() { declarations statement-list } <br/>
 Declarations -> data-type identifier-list; declarations | e <br/>
 data-type -> int | char <br/>
@@ -26,3 +24,16 @@ looping-stat -> while (expn) {statement-list} | for (assign-stat ; expn ; assign
 relop -> == | != | <= | >= | > | < <br/>
 add op -> + | - <br/>
 mulop -> * | / | % <br/>
+
+## Implementation 
+* A C program is given as input to the parser. 
+* Using the functions in generateToken.h, the parser first performs Lexical Analysis and generates tokens.
+* Each time a token is generated it is passed to procedures present in the parser which check whether or not the token is accepted by the grammar.
+* If all the tokens generated for a given program are present in the grammars's productions, the parser returns SUCCESS.
+* If any token generated for a given program is not present in the grammar's productions, the parser returns ERROR.
+* Incase of ERROR, the parser program also displays the lexeme where the error is, and the row and column of numbers corresponding to the lexeme.
+
+
+
+
+
